@@ -24,9 +24,20 @@ namespace xianMvcDemo.Controllers
         /// <summary>
         /// 註冊
         /// </summary>
+        [HttpGet]
+        public ActionResult Register()
+        {
+            return View();
+        }
+
+
+        /// <summary>
+        /// 註冊
+        /// </summary>
         /// <param name="account"></param>
         /// <param name="password"></param>
         /// <returns></returns>
+        [HttpGet]
         public ActionResult Register(string account, string password)
         {
             var loginResult = _memberLogic.Register(account, password);
@@ -78,7 +89,7 @@ namespace xianMvcDemo.Controllers
         /// <param name="account"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        public IsSuccessResult<bool> Login(string account, string password)
+        public IsSuccessResult<bool> Login(string account, string password) 
         {
             try
             {
