@@ -37,7 +37,7 @@ namespace xianMvcDemo.Controllers
         /// <param name="account"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        [HttpGet]
+        [HttpPost]
         public ActionResult Register(string account, string password)
         {
             var loginResult = _memberLogic.Register(account, password);
