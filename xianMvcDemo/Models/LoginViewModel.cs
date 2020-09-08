@@ -9,12 +9,16 @@ namespace xianMvcDemo.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "帳號")]
+        [Display(Name = "Username")]
         public string Account { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "密碼")]
+        [Display(Name = "Password")]
         public string Password { get; set; }
+
+        [Required]
+        [Display(Name = "Remember Me")]
+        public bool RememberMe { get; set; }
     }
 }
